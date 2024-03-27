@@ -1,0 +1,39 @@
+<div class="sidebar">
+   <div class="head">
+    <a href="/home"><img src="/assets/SNV_LOGO.png" alt="" width="180" height="120"></a>
+   </div>
+  <ul>
+    <li><a routerLink="/home" (click)="onLinkClicked()" class="main">Home</a></li>
+    <li><a routerLink="/about" (click)="onLinkClicked()" class="main">About</a></li>
+    <li class="dropdown">
+      <a  class="dropbtn" class="main" >Services<i [ngClass]="dropdownOpen ? 'bx bx-caret-up' : 'bx bx-caret-down'" (click)="toggleDropdown()"></i></a>
+      <div class="dropdown-content" [ngStyle]="{ 'height.px': dropdownOpen ? '260' : '0' }">
+        <a routerLink="/service/software-develop" (click)="onLinkClicked()" class="d-link">Software Development</a>
+        <a routerLink="/service/mobile-application" (click)="onLinkClicked()">Mobile Application</a>
+        <a routerLink="/service/web-component" (click)="onLinkClicked()">Web Development</a> 
+        <a routerLink="/service/testing" (click)="onLinkClicked()">Software Testing</a>
+        <a routerLink="/service/digital-market" (click)="onLinkClicked()">Digital Marketing</a>
+        <a routerLink="/service/quality-assurance" (click)="onLinkClicked()">Quality Assurance</a>
+        <a routerLink="/service/it-staff"(click)="onLinkClicked()">IT Staff Augment</a>
+       <a routerLink="/service/support" (click)="onLinkClicked()">Maintance & Support</a>
+      </div>
+    </li>
+    <li class="dropdown" >
+        <a  class="dropbtn" class="main" >our Expertise <i [ngClass]="dropdownOpened ? 'bx bx-caret-up' : 'bx bx-caret-down'" (click)="toggleDropdowns()"></i></a>
+        <div class="dropdown-content" [ngStyle]="{ 'height.px': dropdownOpened ? '320' : '0' }">
+          <a routerLink="/expertise/microsoft-technologies" (click)="onLinkClicked()">Microsoft Technologies</a>
+            <a routerLink="/expertise/angular" (click)="onLinkClicked()">Angular</a>
+            <a routerLink="/expertise/ionic" (click)="onLinkClicked()">Ionic</a>
+            <a routerLink="/expertise/react-js" (click)="onLinkClicked()">ReactJS</a>
+            <a routerLink="/expertise/java" (click)="onLinkClicked()">Java/J2EE</a>
+            <a routerLink="/expertise/python-development" (click)="onLinkClicked()">Python Development</a>
+            <a routerLink="/expertise/saleforce" (click)="onLinkClicked()">Salesforce</a>
+            <a routerLink="/expertise/mongo-db" (click)="onLinkClicked()">MongoDB</a>
+            <a routerLink="/expertise/sql" (click)="onLinkClicked()">SQL</a>    
+        </div>
+      </li>
+      <li><a routerLink="/portfolio" class="main" (click)="onLinkClicked()">Portfolio</a></li>
+      <li><a routerLink="/careers" class="main" (click)="onLinkClicked()">careers</a></li>
+    <li><a routerLink="/contact-us" class="main" (click)="onLinkClicked()">contact us</a></li>
+  </ul>
+</div>

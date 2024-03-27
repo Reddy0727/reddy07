@@ -1,0 +1,63 @@
+<app-image-slider></app-image-slider>
+
+<div class="box">
+  <div class="grid-container">
+    <div class="grid item1">
+        <div class="title">SNV Software Solutions Private Limited </div>
+        <div class="content">
+            <p class="content-text1 texts">
+              SNV Software Solutions Private Limited, a leading IT service provider in India is proficient in simplifying the client demands with sustainable and personalized IT solutions globally.</p>
+               <p> SNV Software Solutions Private Limited specialize in creating tailored online solutions that blend functionality and aesthetics.
+                With a dedicated team, we transform ideas into interactive and engaging websites, ensuring our clients make a lasting impact in the digital realm.
+                Join us in crafting a web presence that not only stands out but also delivers results​.We understand that every business is unique, and therefore, we approach each project with a fresh perspective, tailoring our solutions to address specific needs and goals.​
+            </p>
+            </div>
+        <button class="btns" routerLink="/about">More About Us</button>
+    </div>
+    <div class="grid item2">
+        <img src="/assets/contact_us.avif"  alt="">
+    </div>
+  </div>
+
+</div>
+
+ <div class="services-container">
+   <div class="headin">
+    <h2>OUR SERVICES</h2>
+   <p>What We Do For You</p>
+   <p>
+     If you are a little to medium estimated association,
+     perceiving the benefit staffing answers for your affiliation is earnest to the achievement of your business.
+   </p>
+   </div>
+   <div class="cards-containers" >
+    <div class="cards cards-item" *ngFor="let card_s of services">
+      <div class="card_s">
+        <div class="picture">
+          <img [src]="card_s.image" alt="" id="img">
+        </div>
+        <button class="button" (click)="goToDetails(card_s.id)">Read More</button>
+        <div class="cards-body">
+          <h3>{{ card_s.title}}</h3>
+          <p>{{ card_s.content }}</p>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+
+  <div class="expertise">
+    <div class="headin">
+      <h2>OUR EXPERTISE</h2>
+     <p>What We Do For You</p>
+     <div class="slider-container">
+      <div class="slider" [@slideAnimation]="currentIndex">
+        <img *ngFor="let image of getVisibleImages(); let i = index" [src]="image" class="slide-img"
+             [class.flipped]="flippedStates[currentIndex + i]" (mouseenter)="flipImage(currentIndex + i)"
+             (mouseleave)="resetFlip(currentIndex + i)" alt="Slide">
+      </div>
+      <button (click)="prev()" class="img-btn"><i class="bi bi-chevron-double-left"></i></button>
+      <button (click)="next()" class="img-btn"><i class="bi bi-chevron-double-right"></i></button>
+    </div>
+  </div> 
+

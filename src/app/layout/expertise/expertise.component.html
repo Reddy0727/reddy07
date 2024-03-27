@@ -1,0 +1,35 @@
+<div>
+  <div class="img-container">
+    <img [src]="imageSource" alt="Top Image"   >
+    <div class="img-heading">
+      <h1>{{ heading}}</h1>
+      <div class="home">
+        <a routerLink="/home"><i class="bi bi-house-check-fill"></i></a>
+        <span> Our Expertise ~ {{ heading }}</span>
+ </div>
+    </div>
+  </div>
+    <div  class="grid-container">
+      <div  class="grid grid-item1">
+        <div>
+            <nav>
+                <h6>OUR EXPERTISE</h6>
+              <ul>
+                <li routerLink="/expertise/microsoft-technologies"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/microsoft-technologies">Microft Technologies</a></li>
+                <li routerLink="/expertise/angular"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/angular">Angular</a></li>
+                <li routerLink="/expertise/ionic"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/ionic">Ionic</a></li>
+                <li routerLink="/expertise/react-js"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/react-js">ReactJS</a></li>
+                <li routerLink="/expertise/java"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/java">Java/J2EE</a></li>
+                <li routerLink="/expertise/python-development"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/python-development">Python Development</a></li>
+                <li routerLink="/expertise/saleforce"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/saleforce">Salesforce</a></li>
+                <li routerLink="/expertise/mongo-db"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/mongo-db">MongoDB</a></li>
+                <li routerLink="/expertise/sql"  routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a routerLink="/expertise/sql">SQL</a></li>
+              </ul>
+            </nav>
+          </div>
+      </div>
+      <div class="grid grid-item2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

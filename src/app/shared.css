@@ -1,0 +1,42 @@
+.text-container p,li{
+    font-size: 16px;
+    color: #999;
+    padding-top: 10px;
+    line-height: 1.6;
+    font-weight: 450;
+    word-wrap: break-word;
+}
+h2{
+    font-size: 1rem;
+    color: #6495ed;
+    font-weight: 700;
+}
+h1{
+    font-size: 1.6rem;
+    color: #121212;
+    font-weight: 750;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: clamp(300px,450px,500px);
+    height: 300px;
+}
+@media screen and (max-width:800px) {
+    img{
+        width: 400px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:500px) {
+    img{
+        width: 250px;
+        height: 180px;
+    }
+    h1{
+        font-size: 1rem;
+    }
+}

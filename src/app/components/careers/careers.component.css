@@ -1,0 +1,140 @@
+@import '../bg_common.css';
+.bg_info{
+    background: url("/assets/career_bg.jpg") center/cover;
+    height: 400px;
+}
+.open-container{
+    text-align: center;
+    background: repeating-linear-gradient(to bottom right, rgba(2, 98, 252, 0.6) , rgba(132, 6, 136, 0.6)), url(/assets/career.jpg) ;
+    background-size: cover;
+    padding: 2rem 1rem;
+    margin: 2rem;
+    line-height: 1.7;
+    border-radius: 10px;
+    color: #fff;
+    h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    p{
+        font-size: 16px;
+        max-width: 140ch;
+        text-align: center;
+    }
+  
+  }
+  button{
+    padding: 10px 1rem;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    color: #030388;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+button:active{
+    transform: rotate(-7deg);
+}
+.grid-mini{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 2rem  ;
+   
+}
+label{
+    color: #000;
+    width: 10%;
+    font-weight: 500;
+    color: #555;
+}
+label,input,textarea{
+    font-size: 13px;
+    margin-block: 3px;
+  
+}
+input,textarea{
+    padding: 7px 1rem;
+    width: 60%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #d7d1d7;
+    margin-top: 7px;
+}
+.group-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+form {
+    background-color: #f8f7f7;
+    margin: 0;
+    padding: 0;
+    padding-top: 4rem;
+}
+#sub{
+    background-color: #3636f9;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 2rem;
+    margin-top: 1.5rem;
+}
+ input[type="file"] {
+ position: relative;
+ cursor: pointer;
+
+    
+}
+.custom-file-label {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 60%;
+}
+@media screen and (max-width:850px) {
+    .heading{
+        top: 50%;
+        left: 18%;  
+    }
+    label{
+        width: 20%;
+    }
+}
+@media screen and (max-width:500px) {
+    .heading{
+        top: 50%;
+        left: 27%;  
+    }
+    .group-input{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    label,input,.custom-file-label{
+        width: 100%;
+    }
+    
+}
+a{
+    text-decoration: none;
+    padding-left: 5px;
+    word-break: break-all;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+small{
+    color: red;
+    font-size: 14px;
+}
+.text{
+    transform: translateX(0);
+}
+@media screen and (min-width:500px) {
+    .text{
+        transform: translateX(33%);
+    }
+}

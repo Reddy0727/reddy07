@@ -1,0 +1,163 @@
+.carousel-container{
+  height: 32rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+   background-color: rgb(90, 192, 228);
+}
+.carousel{
+  /* background-color: rgb(2, 72, 147); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.5s;
+  z-index: 2;
+}
+.carousel-container::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+}
+img{
+  height: 32rem;
+  width: 100%;
+  animation: slideIn 2s ease-in-out 1s forwards;
+  margin-top: 40px;
+  mix-blend-mode: color-burn;
+}
+/* .image-container{
+  background-color: skyblue;
+} */
+#image{
+  height: 30rem;
+  width: 40rem;
+  mix-blend-mode: multiply;
+  opacity: 0;
+  animation: slideIn 2s ease-in-out 1s forwards;
+}
+.anime{
+  animation: slideIn 2s ease-in-out 1s forwards;
+}
+h1{
+  font-size: 2.5rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 800;
+}
+p{
+  font-size: 16px;
+  color: #fff;
+
+}
+.content{
+
+  width: 40%;
+  opacity: 0;
+  animation: slideIn 2s ease-in-out 1s forwards;
+}
+button{
+  border: none;
+  background: #0951d6;
+  padding: 0.3rem  1rem;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: transform 0.2s;
+}
+button:active{
+  transform: scale(1.1);
+}
+.button{
+  position: absolute;
+  top: 40%;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  height: 110px;
+  width: 30px;
+  border-radius: 0;
+  padding: 10px;
+  color: #9b9898;
+  z-index: 6;
+}
+i{
+  font-size: 2rem;
+  margin: -15px;
+  padding: 0;
+}
+.nxt{
+  right: 0;
+}
+.button:active{
+  background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+}
+
+
+.carousel.fade-in-out {
+  opacity: 1; /* Fade in the container */
+}
+
+@media screen and (max-width:800px){
+  #image{
+    height: 20rem;
+    width: 18rem;
+  }
+  .carousel-container{
+    height: 20rem;
+  }
+  h1{
+    font-size: 1.8rem;
+  }
+  img{
+    height: 20rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width:500px){
+  #image{
+    height: 15rem;
+    width: 18rem;
+  }
+  .carousel-container{
+    height: 300px;
+  }
+  h1{
+    font-size: 1rem;
+    color: #fff;
+    -webkit-text-stroke: 0;
+  }
+  img{
+    height: 300px;
+    width: 100%;
+  }
+  .content{
+    transform: translate(10px,-180px);
+    width: 100%;
+    padding: 10px;
+  }
+  .carousel{
+    flex-direction: column;
+  }
+  p{
+    font-size: 14px;
+  }
+  .button{
+    height: 70px;
+    width: 20px;
+  }
+  i{
+    margin: -20px;
+  }
+}
+@keyframes slideIn {
+  100% {
+      opacity: 1;
+  }
+}

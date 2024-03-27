@@ -1,0 +1,64 @@
+<div class="socialmedia">
+      <a href="tel:91 40 4262 0232" class="call"><i class="bi bi-telephone-fill"></i>   + 91 40 4262 0232</a>
+  <div class="icon">
+    <a href="https://www.facebook.com/profile.php?id=100095613003920" class="c1"> <i class="bi bi-facebook"></i> </a>
+    <a class=""><i class="bi bi-twitter-x "></i></a>
+    <a href="https://www.instagram.com/snvsoftwaresolutions/"class="c1"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/snv-software-solutions-ba21ab299"class="c1"><i class="bi bi-linkedin"></i></a>
+  </div>
+</div>
+
+<header>
+  <nav>
+    <div class="navbar-items navbar" id="navbarContent">
+      <a routerLink="/home" ><img  src="/assets/SNV LOGO.jpg" alt="snvit" width="100px" height="50px"></a>
+      <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navigation" >
+        <li ><a class="link" routerLink="/home" routerLinkActive="active"><span>Home</span></a></li>
+        <li ><a routerLink="/about" class="link" routerLinkActive="active"><span>About Us</span></a></li>
+        <li class="dropdown">
+          <a class="link" routerLink="service" routerLinkActive="active" >
+            <span style="cursor: pointer;">Services</span>
+          </a>
+          <ul class="dropdown-content ">
+            <li><a routerLink="/service/software-develop" >SOFTWARE DEVELOPMENT</a></li>
+            <li><a routerLink="/service/mobile-application" >MOBILE APPLICATION</a></li>
+            <li><a routerLink="/service/web-component" >WEB DEVELOPMENT</a></li>
+            <li><a routerLink="/service/testing" >SOFTWARE TESTING</a></li>
+            <li><a routerLink="/service/digital-market" >DIGITAL MARKETING</a></li>
+            <li><a routerLink="/service/quality-assurance" >QUALITY ASSURANCE</a></li>
+            <li><a routerLink="/service/it-staff" >IT STAFF AUGMENT</a></li>
+            <li><a routerLink="/service/support" >MAINTENANCE&SUPPORT</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a routerLink="expertise" class="link" routerLinkActive="active"><span>Our Expertise</span></a>
+          <ul class="dropdown-content" >
+            <li><a routerLink="/expertise/microsoft-technologies">MICROSOFT TECHNOLOGIES</a></li>
+            <li><a routerLink="/expertise/angular">ANGULAR</a></li>
+            <li><a routerLink="/expertise/ionic">IONIC</a></li>
+            <li><a routerLink="/expertise/react-js">REACTJS</a></li>
+            <li><a routerLink="/expertise/java">JAVA/J2EE</a></li>
+            <li><a routerLink="/expertise/python-development">PYTHON DEVELOPMENT</a></li>
+            <li><a routerLink="/expertise/saleforce">SALESFORCE</a></li>
+            <li><a routerLink="/expertise/mongo-db">MONGODB</a></li>
+            <li><a routerLink="/expertise/sql">SQL</a></li>
+          </ul>
+        </li>
+        <li ><a routerLink="/portfolio" class="link" routerLinkActive="active"><span>portfolio</span></a></li>
+        <li ><a routerLink="/careers" class="link" routerLinkActive="active"><span>Careers</span></a></li>
+        <li><a routerLink="/contact-us" class="link" routerLinkActive="active"><span>Contact Us</span></a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas-header  d-flex justify-content-end">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" #closeButton></button>
+  </div>
+  <div class="offcanvas-body">
+   <app-sidebar></app-sidebar>
+  </div>
+</div>

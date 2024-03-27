@@ -1,0 +1,22 @@
+header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    width: 100%;
+    transition: top 0.3s ease; 
+}
+
+header.scrolled {
+    top: -60px; 
+}
+
+main{
+    margin-top: 90px;
+    overflow: hidden;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}

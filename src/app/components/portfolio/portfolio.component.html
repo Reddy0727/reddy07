@@ -1,0 +1,40 @@
+<div class="head">
+    <h1>PORTFOLIO</h1>
+</div>
+<div class="container-fluid">
+    <div class="box">
+         <header>
+            <ul>
+                <li (click)="displayCard('all')">All</li>
+                <li class="touch"  (click)="displayCard('Software Development')">Software Development</li>
+                <li class="touch" (click)="displayCard('mobile application')">Mobile Application</li>
+                <li class="touch"  (click)="displayCard('Web Development')">Web Development</li> 
+                <li class="touch" (click)="displayCard('Software Testing')">Software Testing</li>
+                <li class="touch"  (click)="displayCard('Digital Marketing')">Digital Marketing</li>
+                <li class="touch"  (click)="displayCard('Quality Assurance')">Quality Assurance</li>
+                <li class="touch"  (click)="displayCard('IT Staff Augment')">IT Staff Augment</li>
+                <li class="touch"  (click)="displayCard('Maintenance&support')">Maintenance&Support</li>
+                
+            </ul>
+        </header>
+        <div class="services-container">
+            <div class="cards-containers" [@fade]="isFadingOut ? 'void' : 'normal'">
+                <div class="cards cards-item" *ngFor="let card_s of  filterService" >
+                     <div class="card_s">
+                         <div class="picture">
+                            <img [src]="card_s.image" alt="" id="img">
+                        </div>
+                        <div class="card_s">
+
+                        </div>
+                        <button class="button" (click)="goToDetails(card_s.id)">Read More</button>
+                        <div class="cards-body">
+                             <h3>{{ card_s.title}}</h3>
+                             <p>{{ card_s.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

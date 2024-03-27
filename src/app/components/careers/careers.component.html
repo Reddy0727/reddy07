@@ -1,0 +1,100 @@
+<div class="bg_info">
+    <div class="heading">
+        <h1>Careers</h1>
+    <div class="home">
+        <a routerLink="/home"><i class="bi bi-house-check-fill"></i></a>
+        <span>Careers</span>
+    </div>
+    </div>
+</div>
+<div class="grid-container">
+    <div class="grid item1">
+        <div class="title">Careers</div>
+        <div class="content">
+            <p class="content-text1 texts">
+                <strong>Looking for the best and brightest professionals committed to creating, developing and implementing innovative technology and business solutions for our customers.</strong>
+            </p>
+            <p>
+                Learning mentality is imperative and is presently a typical attrib among corporate world. What is more vital is learning over the aggressive edge.
+                 SNV Software Solutions Private Limited Group has been developing at an exceptionally gigantic rate, this is conceivable in light of the fact that we have individuals who can get a handle on innovation and additionally spaces at incredible speed.
+                 We are a Complete IT Solution organization with individuals having uncommon aptitudes in all resources, this conveys an additional uniqueness to our administrations.
+                 <span>The resume can be sent to <a href="mailto:info@snvsoftwaresolutions.onmicrosoft.com">info@snvsoftwaresolutions.onmicrosoft.com</a></span>
+            </p>
+        </div>
+    </div>
+    <div class="grid item2">
+        <img src="/assets/career_s.webp" alt="">
+    </div>
+</div>
+ <div class="open-container">
+    <h2>GET START WITH US</h2>
+    <p>
+        SNV Software sloutions is fast-growing,dynamic FinTECH  company to empowering flexible ownership solutions to consumers.
+        SNV Software sloutions is fast-growing,dynamic FinTECH  company to empowering flexible ownership solutions to consumers
+    </p>
+    <button id="apply-btn" (click)="scrollToForm()">Apply Now</button>
+</div>
+
+<form  id="form" [formGroup]="form" (ngSubmit)="submitForm()">
+    <div class="grid-mini">
+        <section>
+            <div class="group-input">
+                <label for="fullname">Full Name</label>
+                <input type="text" placeholder="Your full name here" formControlName="fullName" id="fullname">
+            </div>
+            <div *ngIf="form.get('fullName')?.invalid && form.get('fullName')?.touched" class="text">
+                <small>*Full Name is required</small>
+                <small *ngIf="form.get('fullName')?.errors?.['minlength']"> & Full Name must be at least 3 characters long</small>
+            </div>
+            <div class="group-input">
+                 <label for="Mobile Number">Mobile Number</label>
+                 <input type="tel" placeholder="Enter mobile number" inputmode="tel" formControlName="mobileNumber">                    
+            </div>
+            <div *ngIf="form.get('mobileNumber')?.invalid && form.get('mobileNumber')?.touched" class="text">
+                <small>*mobile number is required</small>
+            </div>
+            <div class="group-input">
+               <label for="email">E-mail Address</label>
+                <input type="email" placeholder="example@123.com" inputmode="email" formControlName="email">
+            </div>
+            <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="text">
+                <small>*email is required</small>
+            </div>
+            <div class="group-input">
+                <label for="cCompany">Current Company</label>
+               <input type="text" placeholder="Enter Current Company Name" formControlName="currentCompany">
+           </div>
+           <div *ngIf="form.get('currentCompany')?.invalid && form.get('currentCompany')?.touched" class="text">
+             <small>*field is required</small>
+           </div>
+            <div class="group-input">
+                 <label for="lastname">Protfilolio URL</label>
+                <input type="url" placeholder="Enter the Protfilolio link" inputmode="url" formControlName="portfolioURL">
+            </div>
+            <div *ngIf="form.get('portfolioURL')?.invalid && form.get('portfolioURL')?.touched" class="text">
+                <small>*URL is required</small>
+              </div>
+            <div class="group-input">
+                <label for="lastname">Linkedin URL</label>
+               <input type="url" placeholder="Enter the Linkedin link" inputmode="url" formControlName="linkedinURL">
+           </div>
+           <div *ngIf="form.get('linkedinURL')?.invalid && form.get('linkedinURL')?.touched" class="text">
+            <small>*URL is required</small>
+          </div>
+           <div class="group-input">
+              <label for="lastname">Additional info</label>
+              <textarea name="" id="" cols="30" rows="1" placeholder="comments here" formControlName="additionalInfo"></textarea>
+            </div>
+            <div class="group-input">
+                <label for="resume" id="resum"> Upload Resume/CV<span class="text-danger">*</span></label>
+                <input type="file" #fileInpu id="resume" name="resume" accept=".pdf,.doc,.docx" formControlName="resume">
+            </div>
+            <div *ngIf="form.get('resume')?.invalid && form.get('resume')?.touched" class="text">
+                <small>*resume is required</small>
+              </div>
+              <div class="group-input">
+                <button type="submit" id="sub">Submit</button>
+              </div>
+        </section>
+    </div>
+</form> 

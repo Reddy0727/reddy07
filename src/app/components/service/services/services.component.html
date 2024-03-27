@@ -1,0 +1,36 @@
+<div>
+    <div class="img-container">
+      <img [src]="imageSource" alt="Top Image">
+      <div class="img-heading" >
+        <h1>{{ heading}}</h1>
+        <div class="home">
+             <a routerLink="/home"><i class="bi bi-house-check-fill"></i></a>
+             <span> Services  {{ heading }}</span>
+      </div>
+    </div>
+    </div>
+    <div  class="grid-container">
+      <div  class="grid grid-item1">
+        <div>
+          
+            <nav>
+                <h6> SERVICES</h6>
+              <ul>
+                <li routerLink="/service/software-develop" routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a >Software Development</a></li>
+                <li routerLink="/service/mobile-application" routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a >Mobile Application</a></li>
+                <li routerLink="/service/web-component" routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a >Web Development</a></li>
+                <li routerLink="/service/testing" routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a >Software Testing</a></li>
+                <li routerLink="/service/digital-market" routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a>Digital Marketing</a></li>
+                <li routerLink="/service/quality-assurance" routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a >Quality Assurance</a></li>
+                <li routerLink="/service/it-staff" routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a>IT Staff Augment</a></li>               
+                <li routerLink="/service/support" routerLinkActive="active"><span><i class="bi bi-chevron-double-right"></i></span><a >Maintenance&Support</a></li>
+              </ul>
+            </nav>
+          </div>
+      </div>
+      
+      <div class="grid grid-item2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

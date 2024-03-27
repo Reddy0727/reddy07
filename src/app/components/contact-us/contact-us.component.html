@@ -1,0 +1,84 @@
+<div class="contact">
+    <div class="heading">
+        <h1>Contact Us</h1>
+       <div class="home">
+        <a routerLink="/home" ><i class="bi bi-house-check-fill"></i></a>
+        <span>contact us</span>
+    </div>
+    </div>
+</div>
+<div class="grid-container">
+    <div class="grid-1">
+        <h3 class="fs-3">GET TOUCH</h3>
+        <div class="address">
+            <h5> <i class="bi bi-geo-alt"></i>Location</h5>
+            <address style="margin-left: 17px;">
+                SNV Software Solutions,
+                SRI SAINAGARGUNAKONDA COMPLEX
+                Plot No: DH4 , 101
+                Bandari Layout Road No: 04
+                Nizampet Hyderabad TS 500090
+            </address>
+        </div>
+        <div class="address">
+            <h5> <i class="bi bi-telephone"></i>Phone Number</h5>
+            <p style="margin-left: 17px;"><a href="tel:+91 40 4262 0232">+91 40 4262 0232</a></p>
+        </div>
+        <div class="address">
+            <h5> <i class="bi bi-envelope"></i>E-Mail ID</h5>
+            <p style="margin-left: 17px;"><a href="mailto:shaikhajimalanbaba14@gmail.com">info@snvsoftwaresolutions.onmicrosoft.com</a></p>
+        </div>
+    </div>
+    <div class="grid-2">
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="grid-mini">
+                <aside>
+                    <div class="group-input">
+                        <label for="firstname">First Name</label>
+                        <input type="text" placeholder="Your first name here" formControlName="firstName">
+                    </div>
+                    <div *ngIf="form.get('firstName')?.invalid && form.get('firstName')?.touched" >
+                        <small>*Name is required</small>
+                        <small *ngIf="form.get('firstName')?.errors?.['minlength']"> & Full Name must be at least 3 characters long</small>
+                    </div>
+                    <div class="group-input">
+                         <label for="Mobile Number">Mobile Number</label>
+                         <input type="tel" inputmode="numeric" placeholder="Enter mobile number" formControlName="mobileNumber">                    
+                    </div>
+                    <div *ngIf="form.get('mobileNumber')?.invalid && form.get('mobileNumber')?.touched" >
+                        <small>*mobile number is required</small>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="group-input">
+                         <label for="lastname" >Last Name</label>
+                        <input type="text" placeholder="Your last name here" formControlName="lastName">
+                    </div>
+                    <div *ngIf="form.get('lastName')?.invalid && form.get('lastName')?.touched" >
+                        <small>*Name is required</small>
+                        <small *ngIf="form.get('lastName')?.errors?.['minlength']"> & Full Name must be at least 3 characters long</small>
+                    </div>
+                    <div class="group-input">
+                       <label for="Mobile Number">E-mail Address</label>
+                        <input type="text" placeholder="example@123.com" formControlName="email">
+                    </div>
+                    <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" >
+                        <small>*email is required</small>
+                    </div>
+                </aside>
+            </div>
+            <div class="comments">
+                <div class="group-input">
+                    <label for="Mobile Number">messsage</label>
+                    <textarea name="" id="" cols="30" rows="5" formControlName="message"></textarea>
+                </div>
+                <div class="button text-center">
+                    <button type="submit" class="">Submit Message</button>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</div> 
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7610407.769653336!2d73.63780234493998!3d21.349729257323528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8df961a08357%3A0xdb8a9815a845a0da!2sSNV%20Software%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1698219507578!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
