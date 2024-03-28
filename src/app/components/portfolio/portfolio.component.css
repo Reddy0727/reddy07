@@ -1,7 +1,7 @@
 .cards-containers{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,300px));
-    gap:  5rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px,300px));
+    gap:  2rem;
   }
   .card_s,.cards-body{
     position: relative;
@@ -114,13 +114,21 @@ li:hover{
  
   color: #0951d6;
 }
- @media screen and (max-width:550px) {
+ @media screen and (max-width:650px) {
   .container-fluid{
     padding-inline: 1rem;
   }
   .cards-containers{
 
     grid-template-columns: 1fr;
+    gap:  1rem;
+  }
+} 
+@media screen and (max-width:900px) {
+  
+  .cards-containers{
+
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap:  1rem;
   }
 } 

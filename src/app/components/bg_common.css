@@ -1,7 +1,9 @@
 .bg_info{
     height: clamp(200px, 400px, 400px);
     position: relative;
-    clip-path: polygon(0 0,100% 0,100% 97%,0 100%);
+    /* clip-path: polygon(0 0,100% 0,100% 97%,0 100%); */
+    clip-path: inset(50px round 50% 0);
+   
 }
 .heading{
     position: absolute;

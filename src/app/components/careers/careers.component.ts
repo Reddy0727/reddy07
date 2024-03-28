@@ -26,7 +26,7 @@ export class CareersComponent {
 
   submitForm() {
     if (this.form.valid) {
-      window.confirm('details submited');
+      window.confirm('submitting an application successfully');
       this.form.reset()
     } else {
       this.markFormGroupTouched(this.form);
